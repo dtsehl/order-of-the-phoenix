@@ -1,0 +1,14 @@
+<h1>Order of the Phoenix Members that Belong to <%= @members.first.house %>: <%= @members.count %></h1>
+
+<% @members.each do |member| %>
+  <section id='member-<%= member.id %>'>
+    <h3>Member Name: <%= member.name %></h3>
+    <% if member.role.present? %>
+      <p>Member Role: <%= member.role %></p>
+    <% end %>
+    <p>Member House: <%= member.house %></p>
+    <% if member.patronus.present? %>
+      <p>Member Patronus: <%= member.patronus %></p>
+    <% end %>
+  </section>
+<% end %>
